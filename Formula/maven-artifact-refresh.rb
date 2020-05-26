@@ -1,13 +1,14 @@
 class MavenArtifactRefresh < Formula
   desc "A small script for refresh artifact in local .m2 Maven repository"
   homepage "https://liuxiang.coding.net/p/utils/d/utils/git/tree/master"
-  url "https://liuxiang.coding.net/p/utils/d/utils/git/raw/master/maven-artifact-refresh/maven-artifact-refresh", using: :nounzip
-  sha256 "98e9136812a6c358ed2c48399571972f5ff020016fa4e90629b5f7c9c30b5ee1"
+  url "https://liuxiang.coding.net/p/utils/d/utils/git/raw/master/maven-artifact-refresh/maven-artifact-refresh-1.0.0.zip"
+  sha256 "5c47e061b7304cae65b311712cb993177ed426c28e8d523453c0e69d73e7144e"
   version "1.0.0"
 
   depends_on "fzf" => :recommended
 
   def install
-    bin.install 'maven-artifact-refresh'
+    bin.install 'mar'
+    bin.install 'mad'
   end
 end
