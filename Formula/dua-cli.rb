@@ -9,7 +9,7 @@ class DuaCli < Formula
 
   patch do
     url "https://raw.githubusercontent.com/lululau/homebrew-utils/master/Patches/dua-cli.diff"
-    sha256 "e293515c1d9b73091f033da882ee5b7291f26586ea2f312e48297e6785a02956"
+    sha256 "91fa5135179b024cfa3f686db2f5c84edcd3a5d5f5602297739a37b4cb3547a1"
   end
 
   def install
