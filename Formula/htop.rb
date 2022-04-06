@@ -23,7 +23,7 @@ class Htop < Formula
 
   patch do
     url "https://raw.githubusercontent.com/lululau/homebrew-utils/master/Patches/htop.diff"
-    sha256 "901daadbb0b9b4d74f4548302578d65253ac78d2ed6103ae4f2b5d6ead9c6eaa"
+    sha256 "e293515c1d9b73091f033da882ee5b7291f26586ea2f312e48297e6785a02956"
   end
 
   def install
