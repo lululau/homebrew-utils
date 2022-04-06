@@ -1,0 +1,33 @@
+commit 731d0227e20553515fe9c6b8251133d4449598e1
+Author: Liu Xiang <liuxiang@ktjr.com>
+Date:   Wed Mar 30 18:22:32 2022 +0800
+
+    Modify kbd for `q' and add kbd for `Q'
+
+diff --git a/src/interactive/app/eventloop.rs b/src/interactive/app/eventloop.rs
+index 6814dd2..8282d2a 100644
+--- a/src/interactive/app/eventloop.rs
++++ b/src/interactive/app/eventloop.rs
+@@ -92,9 +92,7 @@ impl AppState {
+                 }
+                 Char('q') | Esc => match self.focussed {
+                     Main => {
+-                        return Ok(ProcessingResult::ExitRequested(WalkResult {
+-                            num_errors: traversal.io_errors,
+-                        }))
++                        self.exit_node_with_traversal(traversal)
+                     }
+                     Mark => self.focussed = Main,
+                     Help => {
+@@ -102,6 +100,11 @@ impl AppState {
+                         window.help_pane = None
+                     }
+                 },
++                Char('Q') => {
++                        return Ok(ProcessingResult::ExitRequested(WalkResult {
++                            num_errors: traversal.io_errors,
++                        }))
++                },
+                 _ => {}
+             }
+ 
