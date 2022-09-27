@@ -14,6 +14,7 @@ class K9s < Formula
       -s -w
       -X github.com/derailed/k9s/cmd.version=#{version}
       -X github.com/derailed/k9s/cmd.commit=#{Utils.git_head}
+      -X github.com/derailed/k9s/cmd.date=#{Date.today.strftime '%Y-%m-%dT%H:%M:%SZ'}
     ]
     system "go", "build", *std_go_args(ldflags: ldflags)
 
