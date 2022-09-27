@@ -12,8 +12,8 @@ class K9s < Formula
   def install
     ldflags = %W[
       -s -w
-      -X github.com/lululau/k9s/cmd.version=#{version}
-      -X github.com/lululau/k9s/cmd.commit=#{Utils.git_head}
+      -X github.com/derailed/k9s/cmd.version=#{version}
+      -X github.com/derailed/k9s/cmd.commit=#{Utils.git_head}
     ]
     system "go", "build", *std_go_args(ldflags: ldflags)
 
