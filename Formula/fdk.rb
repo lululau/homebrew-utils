@@ -9,7 +9,7 @@ class Fdk < Formula
 
   def install
 
-    unless which('docker2x')
+    unless which('docker')
       odie "docker command is not installed"
     end
     bin.install 'fdk'
