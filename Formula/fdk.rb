@@ -5,7 +5,13 @@ class Fdk < Formula
   sha256 "c952a6cc1217274d772ea290ff012072a2980830b544dd65e04860bb1ade2e0a"
   version "1.0.0"
 
+  depends_on "fzf"
+
   def install
+
+    unless which('docker2x')
+      odie "docker command is not installed"
+    end
     bin.install 'fdk'
     bin.install 'fdkx'
     bin.install 'fdki'
