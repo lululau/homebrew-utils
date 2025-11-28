@@ -1,7 +1,7 @@
 class Fastmod < Formula
   desc "Fast, partial replacement for codemod (find/replace tool for programmers)"
   homepage "https://github.com/facebookincubator/fastmod"
-  head "https://github.com/facebookincubator/fastmod.git", branch: "master"
+  head "https://github.com/facebookincubator/fastmod.git", branch: "main"
   license "Apache-2.0"
 
   depends_on "rust" => :build
