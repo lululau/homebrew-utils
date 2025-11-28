@@ -1,8 +1,7 @@
 class Fastmod < Formula
-  desc "Fast partial replacement for the codemod tool"
-  homepage "https://github.com/lululau/fastmod"
-  url "https://github.com/lululau/fastmod/archive/0.4.1a.tar.gz"
-  sha256 "e7cdfcbb3d4d6dbd5568b6c00f46c07a02404ab9f5c9d7df8511c6dfe0cbd556"
+  desc "Fast, partial replacement for codemod (find/replace tool for programmers)"
+  homepage "https://github.com/facebookincubator/fastmod"
+  head "https://github.com/facebookincubator/fastmod.git", branch: "master"
   license "Apache-2.0"
 
   depends_on "rust" => :build
