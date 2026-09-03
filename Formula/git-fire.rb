@@ -2,8 +2,8 @@ class GitFire < Formula
   desc "Git sub-command for cleanup current git repository without losses"
   homepage "https://github.com/lululau/utils/tree/master"
   url "https://github.com/lululau/utils/raw/master/git-fire/git-fire", using: :nounzip
-  sha256 "e963c80ca72e4de462cee9a3eb2ed6b52598fe6f096452f0e1316a0ae7c85577"
-  version "1.0.0"
+  sha256 "e32da6b3511bb19df8ee4c6e313c0bf9b08dbc088cd16ca0f81b0e50b6a2953b"
+  version "1.1.0"
 
   def install
     bin.install 'git-fire'
