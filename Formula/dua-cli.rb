@@ -1,16 +1,14 @@
 class DuaCli < Formula
   desc "View disk space usage and delete unwanted data, fast"
-  homepage "https://lib.rs/crates/dua-cli"
-  url "https://github.com/Byron/dua-cli/archive/refs/tags/v2.17.1.tar.gz"
-  sha256 "d9af81b30f83d080472e91da3e07b42294904827ad5274d9aaf51d346072d2f1"
+  homepage "https://github.com/lululau/dua-cli"
+  # lululau's fork of Byron/dua-cli with snapshot hotkeys:
+  # `E` exports the scan to a cache dir, `R` rescans an imported snapshot and writes it back.
+  url "https://github.com/lululau/dua-cli/archive/60135518ed8c2baafeef8dee87fb55c18af28e56.tar.gz"
+  sha256 "1658b4b81944746e41604a11c304d64e4d2b9c86f05400f5ada4c099e14163fa"
+  version "2.45.1"
   license "MIT"
 
   depends_on "rust" => :build
-
-  patch do
-    url "https://raw.githubusercontent.com/lululau/homebrew-utils/master/Patches/dua-cli.diff"
-    sha256 "91fa5135179b024cfa3f686db2f5c84edcd3a5d5f5602297739a37b4cb3547a1"
-  end
 
   def install
     system "cargo", "install", *std_cargo_args
